@@ -26,7 +26,10 @@
         </script>
         <script type="shader-srouce" id="fragmentShader">
             // 设置像素的填充颜色为红色
-            gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0) // RGBA 模式
+            void main(){
+                //设置像素的填充颜色为红色。
+                gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0); 
+            }
         </script>
 
         <script>
@@ -63,7 +66,7 @@
             //链接着色器程序
             gl.linkProgram(program);
             // 使用刚创建好的着色器程序。
-            //gl.useProgram(program);
+            gl.useProgram(program);
 
             /** 开始绘制 */
             // 设置清空画布颜色为黑色
